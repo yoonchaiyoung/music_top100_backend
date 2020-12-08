@@ -2,7 +2,11 @@ from flask import request, jsonify, Flask
 from pymongo import MongoClient
 from bson.objectid import ObjectId
 
+from flask_cors import CORS
+# pycharm terminal -> pip install -U flask-cors
+
 app = Flask(__name__)
+CORS(app)
 
 client = MongoClient("mongodb://yoonchaiyoung:9452@18.222.215.81", 27017)
 db = client.music_love
