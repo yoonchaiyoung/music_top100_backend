@@ -9,7 +9,7 @@ app = Flask(__name__)
 CORS(app)
 
 client = MongoClient("mongodb://yoonchaiyoung:9452@18.222.215.81", 27017)
-db = client.music_love
+db = client.music_top100
 
 # 전체 음악 TOP100 목록 보여주기
 @app.route("/music/list", methods=["GET"])
